@@ -4,14 +4,8 @@
   margin: 0;
 }
 
-main #about-container-subtitle, main #about-container-title {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100vw;
   display: flex;
@@ -42,173 +36,65 @@ header nav menu li:hover {
 }
 
 main {
+  width: 100vw;
   height: 100vh;
 }
 main #about-container {
   background-color: #282828;
+  width: 100%;
   height: 100%;
+  padding: 25% 0;
+}
+@media (min-width: 576px) {
+  main #about-container {
+    padding: 10% 0;
+  }
 }
 main #about-container-title {
-  position: absolute;
   color: white;
   font-size: 2.75rem;
-  width: 75%;
   text-align: center;
 }
 main #about-container-subtitle {
-  position: absolute;
-  margin-top: 50px;
   color: #be3144;
   font-size: 1.95rem;
-  width: 75%;
   text-align: center;
 }
-main #projects-container {
-  height: 400%;
-  background-color: #45567d;
-}
-main #projects-container-title {
-  color: white;
-  font-size: 2.75rem;
-  padding: 10vh 0 0 0;
-  text-align: center;
-  text-decoration: underline;
-}
-main #projects-container .projects-container-project {
-  width: 75vmin;
-  height: 60vmin;
-  background-color: black;
-}
-main #projects-container .projects-container-project img {
-  width: 100%;
-  height: 85%;
-}
-main #projects-container .projects-container-project-description {
-  color: white;
-  width: 100%;
-  height: 15%;
-  background-color: #282828;
-  text-align: center;
-  font-size: 1.5rem;
-  padding-top: 0.75rem;
-}
-main #projects-container .project-1 {
-  position: absolute;
-  top: 160%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-main #projects-container .project-2 {
-  position: absolute;
-  top: 215%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-main #projects-container .project-3 {
-  position: absolute;
-  top: 270%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-main #projects-container .project-4 {
-  position: absolute;
-  top: 325%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-main #projects-container .project-5 {
-  position: absolute;
-  top: 380%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-main #projects-container .project-6 {
-  position: absolute;
-  top: 435%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-main #projects-container #btn {
-  display: inline-block;
-  background: #000;
-  color: #fff;
-  font-family: inherit;
-  font-size: 1.3rem;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  margin: 0;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  background-color: #282828;
-  border-radius: 0;
-  position: absolute;
-  top: 475%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-main #projects-container #btn i {
-  padding-left: 0.75rem;
-  font-size: 1.1rem;
-}
-main #projects-container #btn:hover {
-  background-color: #be3144;
-}
-main #contact-container {
-  height: 100%;
-  background-color: #575757;
-}
-main #contact-container-title {
-  position: absolute;
-  top: 525%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3.5rem;
-  width: 100%;
-  text-align: center;
-  color: white;
-}
-main #contact-container-subtitle {
-  position: absolute;
-  top: 525%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 65px 0;
-  font-size: 1.25rem;
-  font-style: italic;
-  width: 100%;
-  text-align: center;
-  color: white;
-}
-main #contact-container #contact-info-items {
-  position: absolute;
-  top: 550%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-main #contact-container #contact-info-items .contact-info-item {
+main #about-container-description {
+  padding: 2rem 10%;
   color: white;
   font-size: 1.5rem;
-  margin: 1.5rem 0;
 }
-main #contact-container #contact-info-items .contact-info-item-icon:not(:last-child) {
-  margin-right: 1.2rem;
+@media (min-width: 768px) {
+  main #about-container-description {
+    padding: 2rem 25%;
+  }
 }
-main #contact-container #contact-info-items .contact-info-item-text {
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-}
-main #contact-container #contact-info-items .contact-info-item-text:hover {
-  font-weight: bolder;
+main #about-container-description em {
+  color: #be3144;
 }
 
-footer #footer {
-  border-top: 2px solid red;
-  position: absolute;
-  top: 595%;
-  padding: 0.5rem 1.5rem 0 0;
-  width: 100%;
-  text-align: right;
-  color: white;
-  font-size: 1.2rem;
+footer {
+  background-color: lightgray;
+  font-size: 1.15rem;
+  width: 100vw;
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0.75rem;
+}
+footer #site-info ul {
+  list-style-type: none;
+}
+footer #site-info ul li {
+  display: inline;
+  cursor: pointer;
+}
+footer #site-info ul li:not(:last-child) {
+  margin-right: 1.2rem;
+}
+footer #copyright-info {
+  font-size: 1rem;
 }
