@@ -6,10 +6,12 @@ $contact-color: #575757;
 $header-color: #be3144;
 $emphasis-color: #be3144;
 
+
 header {
    @include hdr-bar($header-color);
 }
 main {
+   overflow: hidden;
    width: 100vw;
    height: 100vh;
    #about-container {

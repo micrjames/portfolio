@@ -1,0 +1,35 @@
+@mixin el($dir, $text-color, $type: about) {
+    position: relative;
+    @if($type == about) {
+	    #{$dir}: 3.5rem;
+	} @else {
+	    #{$dir}: 0;
+	}
+    @include sm {
+	    @if($type == about) {
+		   #{$dir}: 15%;
+		} @else {
+		   #{$dir}: 0;
+		}
+    }
+    @include md {
+	    @if($type == about) {
+		   #{$dir}: 25%;
+		} @else {
+		   #{$dir}: 0;
+		}
+    }
+    @include lg {
+	    @if($type == about) {
+		   #{$dir}: 35%;
+		} @else {
+		   #{$dir}: 0;
+		}
+    }
+ 
+    display: block;
+    text-align: #{$dir};
+    font-size: 1.5rem;
+    color: lighten($text-color, 10%);
+    opacity: 0.5;
+}

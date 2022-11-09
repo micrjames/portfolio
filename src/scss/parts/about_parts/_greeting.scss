@@ -1,0 +1,10 @@
+@import 'title', 'subtitle';
+
+@mixin greeting($text-color) {
+   &-title {
+	   @include title($text-color);
+   }
+   &-subtitle {                                                                                         
+	   @include subtitle($text-color);
+   }
+}

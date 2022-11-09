@@ -1,0 +1,12 @@
+@import 'utils';
+
+@mixin title($text-color) {
+	color: white;
+    font-size: 2.75rem;
+    text-align: center;
+   
+    &::before {
+        content: "<about>";
+	    @include el(left, $text-color);	
+    }
+}
