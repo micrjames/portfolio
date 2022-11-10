@@ -1,4 +1,4 @@
-@import '../../utils/button', '../../utils/utils'; 
+@import '../../../utils/button', '../../../utils/utils'; 
 
 @mixin proj-btn($bg-color) {
     position: relative;

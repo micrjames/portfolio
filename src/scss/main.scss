@@ -1,4 +1,4 @@
-@import 'parts/projects_parts/proj-btn', 'parts/projects-container', 'parts/about-container', 'parts/hdr-bar', 'parts/ftr-bar', 'utils/config', 'utils/utils';
+@import 'parts/sections/projects_parts/proj-btn', 'parts/sections/projects-container', 'parts/sections/about-container', 'parts/hdr-bar', 'parts/ftr-bar', 'utils/config', 'utils/utils';
 
 $about-color: #282828;
 $projects-color: #45567d;
@@ -20,6 +20,45 @@ main {
 	  @include projects($projects-color, $about-color);
 	  #btn {
 		  @include proj-btn($header-color);
+	  }
+   }
+   #contact-container {
+	  background-color: $contact-color;
+	  height: 100vh;
+	  padding: 20vh 0;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: space-around;
+	  align-items: center;
+	  &-title {
+		 font-size: 3.5rem;
+		 color: white;
+	  }
+	  &-subtitle {
+		 font-size: 1.5rem;
+		 font-style: italic;
+		 color: white;
+	  }
+	  #contact-info-items {
+		 .contact-info-item {
+			color: white;
+			font-size: 1.75rem;
+
+			margin: 1.5rem 0;
+			&-icon {
+			   margin-right: 1.2rem;
+			   font-size: 2.1rem;
+			}
+			&-text {
+			   cursor: pointer;
+			   @include transition-ease; 
+
+			   &:hover {
+				  font-weight: bolder;
+				  color: $emphasis-color;
+			   }
+			}
+		 }
 	  }
    }
 }

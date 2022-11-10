@@ -67,6 +67,11 @@ header nav menu li:hover {
   margin: 0;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 main #projects-container #btn {
   left: 50%;
   transform: translateX(-50%);
@@ -332,6 +337,41 @@ main #projects-container #btn i {
 }
 main #projects-container #btn:hover {
   background-color: #be3144;
+}
+main #contact-container {
+  background-color: #575757;
+  height: 100vh;
+  padding: 20vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main #contact-container-title {
+  font-size: 3.5rem;
+  color: white;
+}
+main #contact-container-subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: white;
+}
+main #contact-container #contact-info-items .contact-info-item {
+  color: white;
+  font-size: 1.75rem;
+  margin: 1.5rem 0;
+}
+main #contact-container #contact-info-items .contact-info-item-icon {
+  margin-right: 1.2rem;
+  font-size: 2.1rem;
+}
+main #contact-container #contact-info-items .contact-info-item-text {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+main #contact-container #contact-info-items .contact-info-item-text:hover {
+  font-weight: bolder;
+  color: #be3144;
 }
 
 footer {
