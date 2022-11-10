@@ -1,0 +1,19 @@
+@import '../../utils/button', '../../utils/utils'; 
+
+@mixin proj-btn($bg-color) {
+    position: relative;
+    @extend %center-object-horz;
+    @include button(1.3rem, 0.5rem 1rem, 2.75rem 0);
+    border-radius: 0;
+ 
+	span + i, i + span {
+        padding-left: 0.75rem;
+	}
+    i {
+        font-size: 1.1rem;
+    }
+
+    &:hover {
+        background-color: $bg-color;
+    }
+}

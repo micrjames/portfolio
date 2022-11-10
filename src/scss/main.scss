@@ -1,4 +1,4 @@
-@import 'parts/about-container', 'parts/hdr-bar', 'parts/ftr-bar', 'utils/config', 'utils/res-mq', 'utils/utils', 'utils/button';
+@import 'parts/project_parts/proj-btn', 'parts/projects-container', 'parts/about-container', 'parts/hdr-bar', 'parts/ftr-bar', 'utils/config', 'utils/utils';
 
 $about-color: #282828;
 $projects-color: #45567d;
@@ -17,59 +17,9 @@ main {
 	   @include about-container($about-color, $emphasis-color);
    }
    #projects-container {
-	   background-color: $projects-color;
-	   &-title {
-		 color: white;
-		 font-size: 2.75rem;
-		 padding: 10vh 0 0 0;
-		 text-align: center;
-		 text-decoration: underline;
-	  }
-	  .projects-container-group {
-		 display: grid;
-
-		 justify-content: center;
-		 align-items: center;
-
-		 grid-template-rows: repeat(6, 60vmin); 
-		 grid-template-columns: repeat(1, 75vmin);
-		 @include lg {
-			grid-template-rows: repeat(3, 60vmin); 
-			grid-template-columns: repeat(2, 75vmin);
-		 }
-		 gap: 25px;
-		 &-project {
-			background-color: black;
-			img {
-			   width: 100%;
-			   height: 85%;
-			}
-
-			&-description {
-			   color: white;
-			   width: 100%;
-			   height: 15%;
-			   background-color: $about-color;
-			   text-align: center;
-			   font-size: 1.5rem;
-			   padding-top: 0.75rem;
-			}
-		 }
-	  }
+	  @include projects($projects-color, $about-color);
 	  #btn {
-		 position: relative;
-		 @extend %center-object-horz;
-		 @include button(1.3rem, 0.5rem 1rem, 1.2rem 0);
-		 border-radius: 0;
-
-		 i {
-			padding-left: 0.75rem;
-			font-size: 1.1rem;
-		 }
-
-		 &:hover {
-			background-color: $header-color;
-		 }
+		  @include proj-btn($header-color);
 	  }
    }
 }
