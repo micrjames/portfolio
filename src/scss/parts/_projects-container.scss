@@ -1,4 +1,4 @@
-@import '../utils/res-mq', 'project_parts/project', '../utils/utils';
+@import '../utils/res-mq', 'projects_parts/project', '../utils/utils';
 
 @mixin projects($project-color, $about-color) {
     background-color: $projects-color;
