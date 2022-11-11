@@ -1,3 +1,13 @@
+$about-color: #282828;
+$projects-color: #45567d;
+$contact-color: #575757;
+$header-color: #be3144;
+$emphasis-color: #be3144;
+
+$modal-width: 75%;
+$modal-bg-color: lighten($contact-color, 20%);
+$modal-text-color: black;
+
 *, *::before, *::after {
    box-sizing: border-box;
    padding: 0;

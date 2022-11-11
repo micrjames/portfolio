@@ -1,2 +1,7 @@
+@import "../parts/form-styles", "../utils/config";
+
 %modal-body {  
+    #form {
+	   @include form(100%, $modal-bg-color);
+	}
 }

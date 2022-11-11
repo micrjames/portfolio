@@ -106,6 +106,98 @@ main #contact-container #modal #modal-header, main #contact-container #modal {
   flex-direction: column;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+main #contact-container #modal #modal-body #form {
+  background-color: #bdbdbd;
+  width: 100%;
+  color: white;
+  font-size: 1.75rem;
+}
+main #contact-container #modal #modal-body #form .form-control {
+  font-size: 80%;
+  padding: 1rem 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  align-items: center;
+}
+main #contact-container #modal #modal-body #form .form-control label {
+  grid-column: 1/2;
+}
+main #contact-container #modal #modal-body #form .form-control input[type=text], main #contact-container #modal #modal-body #form .form-control input[type=password], main #contact-container #modal #modal-body #form .form-control input[type=email], main #contact-container #modal #modal-body #form .form-control textarea {
+  grid-column: 2/-1;
+  background-color: #d7d7d7;
+  outline: none;
+  outline-style: none;
+  padding: 0.5rem;
+  font-size: 85%;
+  color: white;
+}
+main #contact-container #modal #modal-body #form .form-control input[type=text]::placeholder, main #contact-container #modal #modal-body #form .form-control input[type=password]::placeholder, main #contact-container #modal #modal-body #form .form-control input[type=email]::placeholder, main #contact-container #modal #modal-body #form .form-control textarea::placeholder {
+  color: white;
+}
+main #contact-container #modal #modal-body #form .form-control input[type=text]:focus, main #contact-container #modal #modal-body #form .form-control input[type=password]:focus, main #contact-container #modal #modal-body #form .form-control input[type=email]:focus, main #contact-container #modal #modal-body #form .form-control textarea:focus {
+  color: white;
+  caret-color: white;
+}
+main #contact-container #modal #modal-body #form .form-control input[type=text]:invalid, main #contact-container #modal #modal-body #form .form-control input[type=password]:invalid, main #contact-container #modal #modal-body #form .form-control input[type=email]:invalid, main #contact-container #modal #modal-body #form .form-control textarea:invalid {
+  border-color: red;
+  color: red;
+}
+main #contact-container #modal #modal-body #form .form-control input[type=text]:invalid ~ .error-message, main #contact-container #modal #modal-body #form .form-control input[type=password]:invalid ~ .error-message, main #contact-container #modal #modal-body #form .form-control input[type=email]:invalid ~ .error-message, main #contact-container #modal #modal-body #form .form-control textarea:invalid ~ .error-message {
+  display: block;
+}
+main #contact-container #modal #modal-body #form .form-control textarea {
+  resize: none;
+  height: 10rem;
+}
+main #contact-container #modal #modal-body #form .form-control .error-message {
+  grid-column: 2/-1;
+  display: none;
+  font-size: 85%;
+  color: red;
+  margin-top: 0.5rem;
+  font-style: italic;
+  list-style-position: inside;
+}
+main #contact-container #modal #modal-body #form .form-control .error-message li {
+  margin: 0.75rem 0;
+}
+main #contact-container #modal #modal-body #form #form-btn-group {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+main #contact-container #modal #modal-body #form #form-btn-group .btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  font-family: inherit;
+  font-size: 85%;
+  text-decoration: none;
+  padding: 0.9rem 1.2rem;
+  margin: 0;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: #646464;
+  border-radius: 0;
+}
+main #contact-container #modal #modal-body #form #form-btn-group-reset {
+  grid-column: 1/3;
+}
+main #contact-container #modal #modal-body #form #form-btn-group-btn {
+  grid-column: 3/-1;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -396,7 +488,7 @@ main #contact-container #contact-info-items .contact-info-item-text:hover {
 }
 main #contact-container #modal {
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 75%;
@@ -416,9 +508,36 @@ main #contact-container #modal #modal-header-text {
   align-self: center;
   text-decoration: underline;
 }
-main #contact-container #modal .modal-body {
+main #contact-container #modal #modal-body {
   margin: 1rem;
   height: 100%;
+}
+@media (min-width: 768px) {
+  main #contact-container #modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    background: #8a8a8a;
+    color: black;
+  }
+  main #contact-container #modal #modal-header-close {
+    font-size: 2.5rem;
+    margin-right: 0.5rem;
+    align-self: flex-end;
+    margin-left: 0.5rem;
+    cursor: pointer;
+  }
+  main #contact-container #modal #modal-header-text {
+    font-size: 1.75rem;
+    align-self: center;
+    text-decoration: underline;
+  }
+  main #contact-container #modal #modal-body {
+    margin: 1rem;
+    height: 100%;
+  }
 }
 main #contact-container #modal.hidden {
   display: none;
