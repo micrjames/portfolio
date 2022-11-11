@@ -1,4 +1,4 @@
-@import 'parts/sections/projects_parts/proj-btn', 'parts/sections/projects-container', 'parts/sections/about-container', 'parts/hdr-bar', 'parts/ftr-bar', 'utils/config', 'utils/utils';
+@import 'parts/sections/projects_parts/proj-btn', 'parts/sections/projects-container', 'parts/sections/about-container', 'parts/hdr-bar', 'parts/ftr-bar', 'utils/config', 'utils/utils', 'modal/modal';
 
 $about-color: #282828;
 $projects-color: #45567d;
@@ -6,6 +6,9 @@ $contact-color: #575757;
 $header-color: #be3144;
 $emphasis-color: #be3144;
 
+$modal-width: 75%;
+$modal-bg-color: lighten($contact-color, 20%);
+$modal-text-color: black;
 
 header {
    @include hdr-bar($header-color);
@@ -23,6 +26,7 @@ main {
 	  }
    }
    #contact-container {
+	  position: relative;
 	  background-color: $contact-color;
 	  height: 100vh;
 	  padding: 20vh 0;
@@ -59,6 +63,13 @@ main {
 			   }
 			}
 		 }
+	  }
+	  #modal {
+		  @include modal($modal-width, $modal-bg-color, $modal-text-color, true, false);
+		  @include box-shadow(0, 3px, 10px, 0, rgb(0 0 0 / 0.2), false);
+		  &.hidden {
+			 display: none;
+		 }		
 	  }
    }
 }

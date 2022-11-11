@@ -1,5 +1,6 @@
-import { projects, toggleBtn, btnStates } from "./incs.js";
+import { projects, toggleBtn, btnStates, contactEmail } from "./incs.js";
 import { removeChildren, setBtnState } from "./utils.js";
+import { modalCloseBtn, closeModal, openModal } from "./modal.js";
 
 setBtnState(toggleBtn, btnStates[0]);
 toggleBtn.addEventListener("click", () => { 
@@ -18,3 +19,5 @@ toggleBtn.addEventListener("click", () => {
    }
 });
 
+modalCloseBtn.addEventListener("click", closeModal);
+contactEmail.addEventListener("click", openModal);

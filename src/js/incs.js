@@ -14,4 +14,9 @@ const btnStates = [
     { show: false, whichSpan: unshowSpan }                                     
 ]; 
 
-export { projects, toggleBtn, btnStates };
+const contactContainer = main.children.namedItem("contact-container");
+
+const contactInfoItems = contactContainer.children.namedItem("contact-info-items");
+const contactEmail = contactInfoItems.children.namedItem("contact-info-email");
+
+export { projects, toggleBtn, btnStates, contactContainer, contactEmail };
