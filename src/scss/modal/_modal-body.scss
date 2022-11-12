@@ -4,4 +4,7 @@
     #form {
 	   @include form(100%, $modal-bg-color);
 	}
+	#modal-output {
+		font-size: 1.5rem;
+	}
 }

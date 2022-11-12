@@ -60,4 +60,12 @@ const setBtnState = function(context, state) {
     }    
 }; 
 
-export { createSpan, removeChildren, setBtnState }; 
+const swapSpaces = function(phrase) {
+    const words = phrase.split(" ");
+      
+    if(words.length > 1)
+        return words.join("%20");
+
+    return words;
+};
+export { createSpan, removeChildren, setBtnState, swapSpaces }; 

@@ -84,7 +84,6 @@ header nav menu li:hover {
 
 a {
   color: white;
-  text-decoration: none;
 }
 
 main #projects-container #btn {
@@ -114,7 +113,6 @@ main #contact-container #modal #modal-header, main #contact-container #modal {
 
 a {
   color: white;
-  text-decoration: none;
 }
 
 main #contact-container #modal #modal-body #form {
@@ -196,6 +194,9 @@ main #contact-container #modal #modal-body #form #form-btn-group-reset {
 }
 main #contact-container #modal #modal-body #form #form-btn-group-btn {
   grid-column: 3/-1;
+}
+main #contact-container #modal #modal-body #modal-output {
+  font-size: 1.5rem;
 }
 
 header {
@@ -491,7 +492,7 @@ main #contact-container #modal {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 75%;
+  width: 100%;
   background: #8a8a8a;
   color: black;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
@@ -518,7 +519,7 @@ main #contact-container #modal #modal-body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 45%;
+    width: 60%;
     background: #8a8a8a;
     color: black;
   }
@@ -560,6 +561,10 @@ footer #site-info ul {
 footer #site-info ul li {
   display: inline;
   cursor: pointer;
+}
+footer #site-info ul li a {
+  color: blue;
+  text-decoration: underline;
 }
 footer #site-info ul li:not(:last-child) {
   margin-right: 1.2rem;

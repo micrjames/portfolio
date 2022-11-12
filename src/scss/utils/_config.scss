@@ -4,7 +4,7 @@ $contact-color: #575757;
 $header-color: #be3144;
 $emphasis-color: #be3144;
 
-$modal-width: 75%;
+$modal-width: 100%;
 $modal-bg-color: lighten($contact-color, 20%);
 $modal-text-color: black;
 
@@ -16,5 +16,4 @@ $modal-text-color: black;
 
 a {
     color: white;
-	text-decoration: none;
 }
