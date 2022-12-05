@@ -1,4 +1,4 @@
 LICENSE
 /node_modules
 .DS_Store
-/src/images
+#/src/images
