@@ -4,7 +4,9 @@ requirejs(['js/modal.min.js', 'js/form.min.js', 'js/incs.js'], function() {
 	  modal.open();
 
 	  const form = new Form(modal.body.children[0], data => {
-		  console.log(data);
+	  });
+	  modal.doOnClose(() => {
+		 form.reset();
 	  });
    });
 });
